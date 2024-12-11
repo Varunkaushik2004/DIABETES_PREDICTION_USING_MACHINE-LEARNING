@@ -1,0 +1,148 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: #f0f4f8;
+    color: #2c3e50;
+}
+
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .logo h2 {
+    color: #00c6ff;
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: background 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background: #00c6ff;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.header h1 {
+    color: #34495e;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 32%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #34495e;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card form input, select, button {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.card form input:focus, .card form select:focus {
+    border-color: #00c6ff;
+    box-shadow: 0px 0px 5px rgba(0, 198, 255, 0.5);
+}
+
+.card form button {
+    background: #00c6ff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.card form button:hover {
+    background: #0072ff;
+}
+
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        flex-basis: 100%;
+    }
+}
